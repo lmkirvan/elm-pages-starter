@@ -164,7 +164,7 @@ content =
     } )
   ,
   ( []
-    , { frontMatter = """{"title":"elm-pages-starter - a simple blog starter","type":"page"}
+    , { frontMatter = """{"title":"Lewis Kirvan's Personal Website","type":"page"}
 """ , body = Nothing
     , extension = "md"
     } )

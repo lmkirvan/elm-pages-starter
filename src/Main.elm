@@ -34,12 +34,12 @@ manifest =
     , categories = [ Pages.Manifest.Category.education ]
     , displayMode = Manifest.Standalone
     , orientation = Manifest.Portrait
-    , description = "elm-pages-starter - A statically typed site generator."
+    , description = "Personal Website of Lewis Kirvan"
     , iarcRatingId = Nothing
-    , name = "elm-pages-starter"
+    , name = "Lewis K."
     , themeColor = Just Color.white
     , startUrl = pages.index
-    , shortName = Just "elm-pages-starter"
+    , shortName = Just "lew-bag"
     , sourceIcon = images.iconPng
     }
 
@@ -220,13 +220,13 @@ header : PagePath Pages.PathKey -> Element msg
 header currentPath =
     Element.column [ Element.width Element.fill ]
         [ Element.el
-            [ Element.height (Element.px 4)
+            [ Element.height (Element.px 20)
             , Element.width Element.fill
             , Element.Background.gradient
                 { angle = 0.2
                 , steps =
-                    [ Element.rgb255 0 242 96
-                    , Element.rgb255 5 117 230
+                    [ Element.rgb255 0 75 200
+                    , Element.rgb255 0 100 75
                     ]
                 }
             ]
@@ -236,20 +236,17 @@ header currentPath =
             , Element.spaceEvenly
             , Element.width Element.fill
             , Element.Region.navigation
-            , Element.Border.widthEach { bottom = 1, left = 0, right = 0, top = 0 }
-            , Element.Border.color (Element.rgba255 40 80 40 0.4)
+            , Element.Border.widthEach { bottom = 2, left = 0, right = 0, top = 0 }
+            , Element.Border.color (Element.rgba255 0 75 75 0.4)
             ]
             [ Element.link []
                 { url = "/"
                 , label =
-                    Element.row [ Font.size 30, Element.spacing 16 ]
-                        [ DocumentSvg.view
-                        , Element.text "elm-pages-starter"
-                        ]
+                    Element.row []
+                        [ DocumentSvg.view  ]
                 }
             , Element.row [ Element.spacing 15 ]
-                [ elmDocsLink
-                , githubRepoLink
+                [ githubRepoLink
                 , highlightableLink currentPath pages.blog.directory "Blog"
                 ]
             ]
@@ -268,9 +265,7 @@ highlightableLink currentPath linkDirectory displayName =
     in
     Element.link
         (if isHighlighted then
-            [ Font.underline
-            , Font.color Palette.color.primary
-            ]
+            [ Font.color Palette.color.primary ]
 
          else
             []
@@ -380,12 +375,12 @@ head metadata =
 
 canonicalSiteUrl : String
 canonicalSiteUrl =
-    "https://elm-pages-starter.netlify.com/"
+    "https://pedantic-volhard-5a400a.netlify.com/"
 
 
 siteTagline : String
 siteTagline =
-    "Starter blog for elm-pages"
+    "Personal Site for Lewis Kirvan"
 
 
 publishedDateView metadata =
@@ -398,24 +393,11 @@ publishedDateView metadata =
 githubRepoLink : Element msg
 githubRepoLink =
     Element.newTabLink []
-        { url = "https://github.com/dillonkearns/elm-pages"
+        { url = "https://github.com/lmkirvan"
         , label =
             Element.image
                 [ Element.width (Element.px 22)
                 , Font.color Palette.color.primary
                 ]
                 { src = ImagePath.toString Pages.images.github, description = "Github repo" }
-        }
-
-
-elmDocsLink : Element msg
-elmDocsLink =
-    Element.newTabLink []
-        { url = "https://package.elm-lang.org/packages/dillonkearns/elm-pages/latest/"
-        , label =
-            Element.image
-                [ Element.width (Element.px 22)
-                , Font.color Palette.color.primary
-                ]
-                { src = ImagePath.toString Pages.images.elmLogo, description = "Elm Package Docs" }
         }
