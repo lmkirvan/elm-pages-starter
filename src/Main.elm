@@ -286,7 +286,7 @@ head metadata =
         Metadata.Page meta ->
             Seo.summaryLarge
                 { canonicalUrlOverride = Nothing
-                , siteName = "elm-pages-starter"
+                , siteName = "lmkjk-personal"
                 , image =
                     { url = images.iconPng
                     , alt = "elm-pages logo"
@@ -302,7 +302,7 @@ head metadata =
         Metadata.Article meta ->
             Seo.summaryLarge
                 { canonicalUrlOverride = Nothing
-                , siteName = "elm-pages starter"
+                , siteName = "lmkjk-personal"
                 , image =
                     { url = meta.image
                     , alt = meta.description
@@ -339,7 +339,7 @@ head metadata =
             in
             Seo.summary
                 { canonicalUrlOverride = Nothing
-                , siteName = "elm-pages-starter"
+                , siteName = "lmkjk-personal"
                 , image =
                     { url = meta.avatar
                     , alt = meta.name ++ "'s elm-pages articles."
@@ -359,7 +359,7 @@ head metadata =
         Metadata.BlogIndex ->
             Seo.summaryLarge
                 { canonicalUrlOverride = Nothing
-                , siteName = "elm-pages"
+                , siteName = "lmkjk-personal"
                 , image =
                     { url = images.iconPng
                     , alt = "elm-pages logo"

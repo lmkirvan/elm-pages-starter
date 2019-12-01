@@ -99,7 +99,7 @@ images =
         , directory = directoryWithoutIndex ["articleCovers"]
         }
     , author =
-        { dillon = (buildImage [ "author", "dillon.jpg" ])
+        { lewis = (buildImage [ "author", "lewis.jpg" ])
         , directory = directoryWithoutIndex ["author"]
         }
     , elmLogo = (buildImage [ "elm-logo.svg" ])
@@ -113,7 +113,7 @@ allImages : List (ImagePath PathKey)
 allImages =
     [(buildImage [ "article-covers", "hello.jpg" ])
     , (buildImage [ "article-covers", "mountains.jpg" ])
-    , (buildImage [ "author", "dillon.jpg" ])
+    , (buildImage [ "author", "lewis.jpg" ])
     , (buildImage [ "elm-logo.svg" ])
     , (buildImage [ "github.svg" ])
     , (buildImage [ "icon-png.png" ])
@@ -146,13 +146,13 @@ content : List ( List String, { extension: String, frontMatter : String, body : 
 content =
     [ 
   ( ["blog", "draft"]
-    , { frontMatter = """{"type":"blog","author":"Dillon Kearns","title":"A Draft Blog Post","description":"I'm not quite ready to share this post with the world","image":"/images/article-covers/mountains.jpg","draft":true,"published":"2019-09-21"}
+    , { frontMatter = """{"type":"blog","author":"Lewis Kirvan","title":"A Draft Blog Post","description":"I'm not quite ready to share this post with the world","image":"/images/article-covers/mountains.jpg","draft":true,"published":"2019-09-21"}
 """ , body = Nothing
     , extension = "md"
     } )
   ,
   ( ["blog", "hello"]
-    , { frontMatter = """{"type":"blog","author":"Dillon Kearns","title":"Hello `elm-pages`! 🚀","description":"Here's an intro for my blog post to get you interested in reading more...","image":"/images/article-covers/hello.jpg","published":"2019-09-21"}
+    , { frontMatter = """{"type":"blog","author":"Lewis Kirvan","title":"Hello `elm-pages`! 🚀","description":"Here's an intro for my blog post to get you interested in reading more...","image":"/images/article-covers/hello.jpg","published":"2019-09-21"}
 """ , body = Nothing
     , extension = "md"
     } )

@@ -113,7 +113,7 @@ postPreview post =
             |> Element.text
             |> List.singleton
             |> Element.paragraph
-                [ Element.Font.size 22
+                [ Element.Font.size 18
                 , Element.Font.center
                 , Element.Font.family [ Element.Font.typeface "Raleway" ]
                 ]
